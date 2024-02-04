@@ -1,73 +1,72 @@
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Add a specific font stack */
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5; /* Light gray background */
-  }
-  
-  header {
-    background-color: #337ab7; /* Blue header */
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  footer {
-    background-color: #f0f0f0; /* Light gray footer */
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Add a specific font stack */
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Light gray background */
+}
+
+header {
+  background-color: #337ab7; /* Blue header */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #f0f0f0; /* Light gray footer */
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #4CAF50; /* Green button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+  /* Adjust layout for smaller screens */
   .search-bar {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    flex-direction: column;
   }
-  
-  input[type="text"] {
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    background-color: #4CAF50; /* Green button */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Add a smooth transition */
-  }
-  
-  button:hover {
-    background-color: #45a049; /* Darker green on hover */
-  }
-  
-  @media (max-width: 768px) {
-    /* Adjust layout for smaller screens */
-    .search-bar {
-      flex-direction: column;
-    }
-  
-    #map-container {
-      height: 300px; /* Adjust height for smaller screens */
-    }
-  }
-  
+
   #map-container {
-    height: 400px; /* Adjust height as needed */
-    padding: 10px; /* Add padding for spacing */
+    height: 300px; /* Adjust height for smaller screens */
   }
-  
-  /* Optional Leaflet map styling */
-  .leaflet-container {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
+}
+
+#map-container {
+  height: 400px; /* Adjust height as needed */
+  padding: 10px; /* Add padding for spacing */
+}
+
+/* Optional Leaflet map styling */
+.leaflet-container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
