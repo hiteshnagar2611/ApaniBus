@@ -1,2 +1,0 @@
-{ route: '1+1A', stops: ['iit jodhpur','mandore', 'sojati gate', 'Stop 3'], schedule: { weekdays: ['8:00 AM', '10:00 AM'], weekends: ['9:00 AM', '11:00 AM'] } },
-{ route: '1+1B', stops: ['Stop 4', 'Stop 5', 'Stop 6'], schedule: { weekdays: ['9:00 AM', '11:00 AM'], weekends: ['10:00 AM', '12:00 PM'] } },
