@@ -51,5 +51,3 @@ This web application allows users to search for bus routes between two stops and
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
-
-Feel free to customize the README file further based on your project's specifics and requirements.
