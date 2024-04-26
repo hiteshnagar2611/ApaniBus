@@ -6,23 +6,14 @@
     <title>Bus Route</title>
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        #map {
-            height: 400px;
-        }
-        #busList {
-            padding: 20px;
-        }
-    </style>
+    <!-- <style>
+       
+    </style> -->
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <h1>Bus Route</h1>
+        <h3>Bus Route</h3>
     </header>
     <main>
         <section id="map"></section>
@@ -32,6 +23,7 @@
             <label for="endStop">End Stop:</label>
             <input type="text" id="endStop" name="endStop" placeholder="Enter end stop..."><br><br>
             <button id="searchButton">Search</button>
+            <div id="busname"></div>
         </section>
     </main>
 
@@ -59,6 +51,7 @@
                     function searchBuses() {
                         var startStop = document.getElementById('startStop').value.trim();
                         var endStop = document.getElementById('endStop').value.trim();
+                        var matchedRouteNames = []; // Array to store matched route names
 
                         // Find all routes that match the provided start and end stops
                         var matchingRoutes = data.filter(bus => {
@@ -111,6 +104,9 @@
 
                                 // Add the polyline to the array of all polylines
                                 allPolylines.push(polyline);
+
+                                // Push the route name to the matchedRouteNames array
+                                matchedRouteNames.push(matchingRoute.route);
                             });
 
                             // Fit map bounds to show all markers and polylines
@@ -119,6 +115,8 @@
                         } else {
                             console.log("No routes found for the provided stops.");
                         }
+                         // Print matched route names in the div with id "busname"
+                        document.getElementById('busname').innerHTML = "<strong>Matched Route Names:</strong><br>" + matchedRouteNames.join("<br>");
                     }
 
 
